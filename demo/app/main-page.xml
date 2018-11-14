@@ -1,0 +1,6 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" class="page"
+  xmlns:ui="nativescript-multiple-list-picker">
+  <StackLayout class="p-20">
+    <ui:MultipleListPicker value="{{ Value }}" items="{{ Items }}" />
+  </StackLayout>
+</Page>
