@@ -1,40 +1,51 @@
-# Your Plugin Name
+# Multiple List Picker
 
-Add your plugin badges here. See [nativescript-urlhandler](https://github.com/hypery2k/nativescript-urlhandler) for example.
+This plugin allows to create multiple list picker, as Android does. However, instead we use multiple lists, we can use one component. E.g:
 
-Then describe what's the purpose of your plugin. 
+![Multiple List Picker](./docs/multiple-list-picker.png)
 
-In case you develop UI plugin, this is where you can add some screenshots.
 
-## (Optional) Prerequisites / Requirements
-
-Describe the prerequisites that the user need to have installed before using your plugin. See [nativescript-firebase plugin](https://github.com/eddyverbruggen/nativescript-plugin-firebase) for example.
-
-## Installation
-
-Describe your plugin installation steps. Ideally it would be something like:
-
-```javascript
-tns plugin add <your-plugin-name>
+```xml
+<GridLayout *ngIf="!IsAndroid" columns="*">
+    <MultipleListPicker [value]="Value" [items]="Items" (valueChange)="OnValueItemsChanged($event.object.value)"></MultipleListPicker>
+</GridLayout>
+<GridLayout *ngIf="IsAndroid" columns="*,auto,auto,auto,auto,auto,*">
+    <ListPicker col="1" [items]="Items[0]" [selectedIndex]="Value[0]" (selectedIndexChange)="OnSelectedIndexChanged(0, $event.object.selectedIndex)"></ListPicker>
+    <ListPicker col="2" [items]="Items[1]" [selectedIndex]="Value[1]" (selectedIndexChange)="OnSelectedIndexChanged(1, $event.object.selectedIndex)"></ListPicker>
+    <Label col="3" text="," verticalAlignment="center"></Label>
+    <ListPicker col="4" [items]="Items[3]" [selectedIndex]="Value[3]" (selectedIndexChange)="OnSelectedIndexChanged(3, $event.object.selectedIndex)"></ListPicker>
+    <ListPicker col="5" [items]="Items[4]" [selectedIndex]="Value[4]" (selectedIndexChange)="OnSelectedIndexChanged(4, $event.object.selectedIndex)"></ListPicker>
+</GridLayout>
 ```
 
 ## Usage 
 
-Describe any usage specifics for your plugin. Give examples for Android, iOS, Angular if needed. See [nativescript-drop-down](https://www.npmjs.com/package/nativescript-drop-down) for example.
-	
-	```javascript
-    Usage code snippets here
-    ```)
+Import the module of multiple list picker in your Nativescript + Angular app: 
 
-## API
+```typescript
+import { MultipleListPickerModule } from "nativescript-multiple-list-picker/angular";
 
-Describe your plugin methods and properties here. See [nativescript-feedback](https://github.com/EddyVerbruggen/nativescript-feedback) for example.
-    
-| Property | Default | Description |
-| --- | --- | --- |
-| some property | property default value | property description, default values, etc.. |
-| another property | property default value | property description, default values, etc.. |
-    
-## License
+@NgModule({
+    declarations: [
+    ],
+    exports: [
+        MultipleListPickerModule, // If you need
+    ],
+    imports: [
+        MultipleListPickerModule,
+    ],
+    providers: [
+    ],
+    schemas: [
+    ]
+})
+```
 
-Apache License Version 2.0, January 2004
+In your view, you can use the list following the example: 
+
+```xml
+<MultipleListPicker
+    [value]="Value" // Value selected
+    [items]="Items" // Items
+    (valueChange)="OnValueItemsChanged($event.object.value)"></MultipleListPicker>
+```
