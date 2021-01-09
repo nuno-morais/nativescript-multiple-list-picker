@@ -1,13 +1,13 @@
 {
   "name": "nativescript-multiple-list-picker",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "description": "Your awesome NativeScript plugin.",
   "main": "multiple-list-picker",
   "typings": "index.d.ts",
   "nativescript": {
     "platforms": {
-      "android": "7.1.1",
-      "ios": "7.1.1"
+      "android": "7.0.1",
+      "ios": "7.1.0"
     }
   },
   "scripts": {
