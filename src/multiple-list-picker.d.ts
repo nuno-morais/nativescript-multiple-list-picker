@@ -1,4 +1,4 @@
-import { View, Style, Property, CssProperty, EventData } from "tns-core-modules/ui/core/view";
+import { EventData, Property, View } from "@nativescript/core";
 
 export class MultipleListPicker extends View
 {

@@ -1,4 +1,4 @@
-import { Common as MultipleListPickerBase, valueProperty, itemsProperty } from './multiple-list-picker.common';
+import { Common as MultipleListPickerBase, itemsProperty, valueProperty } from './multiple-list-picker.common';
 
 export class MultipleListPicker extends MultipleListPickerBase {
     nativeView: UIPickerView;

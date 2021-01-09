@@ -1,4 +1,4 @@
-import { View, Property, isIOS, CoercibleProperty } from "tns-core-modules/ui/core/view";
+import { CoercibleProperty, Property, View } from "@nativescript/core";
 import { MultipleListPicker as MultipleListPickerDefinition } from "./index";
 
 export abstract class Common extends View implements MultipleListPickerDefinition {
