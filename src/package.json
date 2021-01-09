@@ -1,57 +1,58 @@
 {
-    "name": "nativescript-multiple-list-picker",
-    "version": "1.0.0",
-    "description": "Your awesome NativeScript plugin.",
-    "main": "multiple-list-picker",
-    "typings": "index.d.ts",
-    "nativescript": {
-        "platforms": {
-            "android": "4.2.0",
-            "ios": "4.2.0"
-        }
-    },
-    "scripts": {
-        "tsc": "tsc",
-        "build": "npm run tsc && npm run build.native",
-        "build.native": "node scripts/build-native.js",
-        "postclone": "npm i && node scripts/postclone.js && cd ../demo && npm i && npx rimraf -- package-lock.json && cd ../src",
-        "test.android": "npm run tsc && npm run tslint && cd ../demo && tns build android && tns test android --justlaunch",
-        "test.ios": "npm run tsc && npm run tslint && cd ../demo && tns build ios && tns test ios --justlaunch",
-        "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
-        "plugin.tscwatch": "npm run tsc -- -w",
-        "demo.ios": "npm run tsc && cd ../demo && tns run ios --syncAllFiles --emulator",
-        "demo.android": "npm run tsc && cd ../demo && tns run android --syncAllFiles --emulator",
-        "demo.reset": "cd ../demo && npx rimraf -- hooks node_modules platforms package-lock.json",
-        "plugin.prepare": "npm run build && cd ../demo && tns plugin remove nativescript-multiple-list-picker && tns plugin add ../src",
-        "clean": "npm run demo.reset && npx rimraf -- node_modules package-lock.json && npm i",
-        "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'",
-        "prepack": "npm run build.native"
-    },
-    "keywords": [
-        "NativeScript",
-        "JavaScript",
-        "Android",
-        "iOS"
-    ],
-    "author": {
-        "name": "Nuno Morais"
-    },
-    "bugs": {
-        "url": "https://github.com/nuno-morais/nativescript-multiple-list-picker/issues"
-    },
-    "license": "Apache-2.0",
-    "homepage": "https://github.com/nuno-morais/nativescript-multiple-list-picker",
-    "readmeFilename": "README.md",
-    "devDependencies": {
-        "@angular/core": "~11.0.7",
-        "@nativescript/angular": "~11.0.0",
-        "@nativescript/core": "~7.1.0",
-        "@nativescript/types": "^7.1.0",
-        "prompt": "^1.1.0",
-        "rimraf": "^3.0.2",
-        "semver": "^7.3.4",
-        "typescript": "~4.0.0"
-    },
-    "dependencies": {},
-    "bootstrapper": "nativescript-plugin-seed"
+  "name": "nativescript-multiple-list-picker",
+  "version": "7.0.0",
+  "description": "Your awesome NativeScript plugin.",
+  "main": "multiple-list-picker",
+  "typings": "index.d.ts",
+  "nativescript": {
+    "platforms": {
+      "android": "7.1.1",
+      "ios": "7.1.1"
+    }
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "build": "npm run tsc && npm run build.native",
+    "build.native": "node scripts/build-native.js",
+    "postclone": "npm i && node scripts/postclone.js && cd ../demo && npm i && npx rimraf -- package-lock.json && cd ../src",
+    "test.android": "npm run tsc && npm run tslint && cd ../demo && tns build android && tns test android --justlaunch",
+    "test.ios": "npm run tsc && npm run tslint && cd ../demo && tns build ios && tns test ios --justlaunch",
+    "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
+    "plugin.tscwatch": "npm run tsc -- -w",
+    "demo.ios": "npm run tsc && cd ../demo && tns run ios --syncAllFiles --emulator",
+    "demo.android": "npm run tsc && cd ../demo && tns run android --syncAllFiles --emulator",
+    "demo.reset": "cd ../demo && npx rimraf -- hooks node_modules platforms package-lock.json",
+    "plugin.prepare": "npm run build && cd ../demo && tns plugin remove nativescript-multiple-list-picker && tns plugin add ../src",
+    "clean": "npm run demo.reset && npx rimraf -- node_modules package-lock.json && npm i",
+    "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'",
+    "prepack": "npm run build.native"
+  },
+  "keywords": [
+    "NativeScript",
+    "JavaScript",
+    "Android",
+    "iOS"
+  ],
+  "author": "Nuno Morais <nuno@morais.dev>",
+  "bugs": {
+    "url": "https://github.com/nuno-morais/nativescript-multiple-list-picker/issues"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/nuno-morais/nativescript-multiple-list-picker",
+  "devDependencies": {
+    "@angular/core": "~11.0.7",
+    "@nativescript/angular": "~11.0.0",
+    "@nativescript/core": "~7.1.0",
+    "@nativescript/types": "^7.1.0",
+    "prompt": "^1.1.0",
+    "rimraf": "^3.0.2",
+    "semver": "^7.3.4",
+    "typescript": "~4.0.0"
+  },
+  "dependencies": {},
+  "bootstrapper": "nativescript-plugin-seed",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuno-morais/nativescript-multiple-list-picker.git"
+  }
 }
